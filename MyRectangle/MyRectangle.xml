@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyRectangle.Lab1</name>
+    </assembly>
+    <members>
+        <member name="T:MyRectangle.PointLocation">
+            <summary>
+            Enum of possible <c>Point</c> positions relative to <c>Figure</c>
+            </summary>
+        </member>
+        <member name="F:MyRectangle.PointLocation.InFigure">
+            <summary>
+            <c>Point</c> locates in figure
+            </summary>
+        </member>
+        <member name="F:MyRectangle.PointLocation.OnTheBorder">
+            <summary>
+            <c>Point</c> locates on the border of figure
+            </summary>
+        </member>
+        <member name="F:MyRectangle.PointLocation.OutOfFigure">
+            <summary>
+            <c>Point</c> locates out of figure
+            </summary>
+        </member>
+        <member name="T:MyRectangle.VectorExtensions">
+            <summary>
+            Class with extension methods for a <c>Vector</c> type
+            </summary>
+        </member>
+        <member name="M:MyRectangle.VectorExtensions.Contains(MyRectangle.Vector,MyRectangle.Point)">
+            <summary>
+            Method for checking the location of a <c>Point</c> on a <c>Vector</c>
+            </summary>
+            <param name="vector"><c>Vector</c> being checked</param>
+            <param name="point"><c>Point</c> being checked</param>
+            <returns>true - <c>Point</c> is on a <c>Vector</c>, false - it is not</returns>
+        </member>
+        <member name="T:MyRectangle.VectorFactory">
+            <summary>
+            Factory for a certain <c>Vector</c> types
+            </summary>
+        </member>
+        <member name="M:MyRectangle.VectorFactory.GetXAxisUnitVector">
+            <summary>
+            Method to get X axis unit <c>Vector</c>
+            </summary>
+            <returns>X axis unit <c>Vector</c> </returns>
+        </member>
+        <member name="M:MyRectangle.VectorFactory.GetYAxisUnitVector">
+            <summary>
+            Method to get Y axis unit <c>Vector</c>
+            </summary>
+            <returns>Y axis unit <c>Vector</c> </returns>
+        </member>
+        <member name="T:MyRectangle.IFigure">
+            <summary>
+            Common figure interface
+            </summary>
+        </member>
+        <member name="P:MyRectangle.IFigure.Perimeter">
+            <summary>
+            Property to get square of the figure
+            </summary>
+        </member>
+        <member name="P:MyRectangle.IFigure.Square">
+            <summary>
+            Property to get perimeter of the figure
+            </summary>
+        </member>
+        <member name="T:MyRectangle.MyRectangle">
+            <summary>
+            Class <c>MyRectangle</c> represents 2D rectangle figure
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.Angle">
+            <summary>
+            Property to get angle beetween <c>Vector</c> of LeftBottom and LeftTop <c>Points</c> and X axis in radians
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.Perimeter">
+            <summary>
+            Property ti get perimeter of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.Square">
+            <summary>
+            Property to get square of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.Width">
+            <summary>
+            Property to get width of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.Height">
+            <summary>
+            Property to get height of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.LeftBottom">
+            <summary>
+            Property to get LeftBottom <c>Point</c> of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.LeftTop">
+            <summary>
+            Property to get LeftTop <c>Point</c> of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.RightTop">
+            <summary>
+            Property to get RightTop <c>Point</c> of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.MyRectangle.RightBottom">
+            <summary>
+            Property to get RightBottom <c>Point</c> of a <c>MyRectangle</c>
+            </summary>
+        </member>
+        <member name="M:MyRectangle.MyRectangle.#ctor(MyRectangle.Point,MyRectangle.Point,MyRectangle.Point,MyRectangle.Point)">
+            <summary>
+            Constructor of <c>MyRectangle</c> from 4 <c>Points</c>
+            </summary>
+            <param name="leftBottom">LeftBottom <c>Point</c></param>
+            <param name="leftTop">LeftTop <c>Point</c></param>
+            <param name="rightTop">RigtTop <c>Point</c></param>
+            <param name="rightBottom">RightBottom <c>Point</c></param>
+        </member>
+        <member name="M:MyRectangle.MyRectangle.#ctor(MyRectangle.Vector,MyRectangle.Vector,MyRectangle.Vector,MyRectangle.Vector)">
+            <summary>
+            Constructor of <c>MyRectangle</c> from 4 <c>Vectors</c>
+            </summary>
+            <param name="leftVertical"><c>Vector</c> beetween LeftBottom and LeftTop <c>Points</c> of <c>MyRectangle</c></param>
+            <param name="topHorizontal"><c>Vector</c> beetween LeftTop and RightTop <c>Points</c> of <c>MyRectangle</c></param>
+            <param name="rightVertical"><c>Vector</c> beetween RightTop and RightBottom <c>Points</c> of <c>MyRectangle</c></param>
+            <param name="bottomHorizontal"><c>Vector</c> beetween RightBottom and LeftBottom <c>Points</c> of <c>MyRectangle</c></param>
+        </member>
+        <member name="M:MyRectangle.MyRectangle.CheckLocation(MyRectangle.Point)">
+            <summary>
+            Method to check location of a <c>Point</c> relatively to a <c>MyRectangle</c>
+            </summary>
+            <param name="point"><c>Point</c> to check</param>
+            <returns>One of <c>PointLocation</c> enum value</returns>
+        </member>
+        <member name="M:MyRectangle.MyRectangle.ToString">
+            <summary>
+            Перегрузка срокового представления
+            </summary>
+            <returns>Строковое представление</returns>
+        </member>
+        <member name="T:MyRectangle.Point">
+            <remarks><c>Point</c> struct which models point on the plane</remarks>
+        </member>
+        <member name="P:MyRectangle.Point.X">
+            <summary>
+            Property to get X coordinate of <c>Point</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.Point.Y">
+            <summary>
+            Property to get Y coordinate of <c>Point</c>
+            </summary>
+        </member>
+        <member name="M:MyRectangle.Point.op_Multiply(MyRectangle.Point,System.Double)">
+            <summary>
+            Overloaded multiply <c>Point</c> by constant operator
+            </summary>
+            <param name="a">Point to multiply</param>
+            <param name="k">Constant to multiply</param>
+            <returns>Новая точка с координатами увеличенными в <c>k</c> раз</returns>
+        </member>
+        <member name="M:MyRectangle.Point.op_GreaterThan(MyRectangle.Point,MyRectangle.Point)">
+            <summary>
+            Overloaded GT operator for <c>Point</c>
+            </summary>
+            <param name="a">Fisrt <c>Point</c> to compare</param>
+            <param name="b">Second <c>Point</c> to compare</param>
+            <returns>true - distance from origin to the first <c>Point</c> is greater than to second <c>Point</c>, false - contrawise</returns>
+        </member>
+        <member name="M:MyRectangle.Point.op_LessThan(MyRectangle.Point,MyRectangle.Point)">
+            <summary>
+            Overloaded LT operator for <c>Point</c>
+            </summary>
+            <param name="a">Fisrt <c>Point</c> to compare</param>
+            <param name="b">Second <c>Point</c> to compare</param>
+            <returns>true - distance from origin to the first <c>Point</c> is less than to second <c>Point</c>, false - contrawise</returns>
+        </member>
+        <member name="T:MyRectangle.Vector">
+            <summary>
+            Struct <c>Vector</c> which models vector on the plane
+            </summary>
+        </member>
+        <member name="P:MyRectangle.Vector.Length">
+            <summary>
+            Property to get length module of a <c>Vector</c> based on the Pythagoras theorem
+            </summary>
+        </member>
+        <member name="P:MyRectangle.Vector.X">
+            <summary>
+            Property to get X coordinate of a <c>Vector</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.Vector.Y">
+            <summary>
+            Property to get Y coordinate of a <c>Vector</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.Vector.From">
+            <summary>
+            Property to get begin <c>Point</c> of a <c>Vector</c>
+            </summary>
+        </member>
+        <member name="P:MyRectangle.Vector.To">
+            <summary>
+            Property to get end <c>Point</c> of a <c>Vector</c>
+            </summary>
+        </member>
+        <member name="M:MyRectangle.Vector.#ctor(MyRectangle.Point,MyRectangle.Point)">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:MyRectangle.Vector.GetAngleBetween(MyRectangle.Vector)">
+            <summary>
+            Method which counts angle beetween two <c>Vectors</c>
+            </summary>
+            <param name="vector"><c>Vector</c> with which it is necessary to find an angle</param>
+            <returns>Cos(a), where a - angle beetween two <c>Vectors</c> in radians</returns>
+        </member>
+        <member name="M:MyRectangle.Vector.IsPerpendecularTo(MyRectangle.Vector)">
+            <summary>
+            Method which checks if a <c>Vector</c> is perpendicular to a given <c>Vector</c>
+            </summary>
+            <param name="vector"><c>Vector</c> to check</param>
+            <returns>true - <c>Vectors</c> are perpendicular, false - they are not</returns>
+        </member>
+        <member name="M:MyRectangle.Vector.IsCollinearTo(MyRectangle.Vector)">
+            <summary>
+            Method which checks if a <c>Vector</c> is collinear to a given <c>Vector</c>
+            </summary>
+            <param name="vector"><c>Vector</c> to check</param>
+            <returns>true - <c>Vectors</c> are collinear, false - they are not</returns>
+        </member>
+        <member name="M:MyRectangle.Vector.ScalarMultiply(MyRectangle.Vector)">
+            <summary>
+            Method which counts scalar multiply of two <c>Vectors</c>
+            </summary>
+            <param name="other"><c>Vectors</c> with which it is necssary to find scalar multiply</param>
+            <returns>Scalar multiply</returns>
+        </member>
+        <member name="M:MyRectangle.Vector.Equals(System.Object)">
+            <summary>
+            Перегрузка сравнения
+            </summary>
+            <returns>true - равны</returns>
+        </member>
+        <member name="M:MyRectangle.Vector.GetHashCode">
+            <summary>
+            Перегрузка хэширования
+            </summary>
+            <returns>Хэш</returns>
+        </member>
+        <member name="M:MyRectangle.Vector.ToString">
+            <summary>
+            Перегрузка строкового представления
+            </summary>
+            <returns>Строковое представление</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Красивые формы для сайта - примеры оформления</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Примеры красивого оформления форм на сайте" />
+    <meta name="author" content="HTML5BOOK" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="single.css" />
+    <style>
+        body {
+            background: #f69a73;
+        }
+
+        .decor {
+            position: relative;
+            max-width: 400px;
+            margin: 50px auto 0;
+            background: white;
+            border-radius: 30px;
+        }
+
+        .form-left-decoration,
+        .form-right-decoration {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background: #f69a73;
+            border-radius: 20px;
+        }
+
+        .form-left-decoration {
+            bottom: 60px;
+            left: -30px;
+        }
+
+        .form-right-decoration {
+            top: 60px;
+            right: -30px;
+        }
+
+            .form-left-decoration:before,
+            .form-left-decoration:after,
+            .form-right-decoration:before,
+            .form-right-decoration:after {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 20px;
+                border-radius: 30px;
+                background: white;
+            }
+
+        .form-left-decoration:before {
+            top: -20px;
+        }
+
+        .form-left-decoration:after {
+            top: 20px;
+            left: 10px;
+        }
+
+        .form-right-decoration:before {
+            top: -20px;
+            right: 0;
+        }
+
+        .form-right-decoration:after {
+            top: 20px;
+            right: 10px;
+        }
+
+        .circle {
+            position: absolute;
+            bottom: 80px;
+            left: -55px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .form-inner {
+            padding: 50px;
+        }
+
+            .form-inner input,
+            .form-inner textarea {
+                display: block;
+                width: 100%;
+                padding: 0 20px;
+                margin-bottom: 10px;
+                background: #E9EFF6;
+                line-height: 40px;
+                border-width: 0;
+                border-radius: 20px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+                .form-inner input[type="submit"] {
+                    margin-top: 30px;
+                    background: #f69a73;
+                    border-bottom: 4px solid #d87d56;
+                    color: white;
+                    font-size: 14px;
+                }
+
+            .form-inner textarea {
+                resize: none;
+            }
+
+            .form-inner h3 {
+                margin-top: 0;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 24px;
+                color: #707981;
+            }
+
+        @media(max-width:480px) {
+
+            .form-left-decoration,
+            .form-right-decoration,
+            .circle {
+                display: none;
+            }
+
+            .form-inner {
+                padding: 30px 20px;
+            }
+
+                .form-inner h3 {
+                    text-align: center;
+                }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top"><a href="https://html5book.ru/krasivaya-forma-dlya-sayta/">Назад к уроку</a></div>
+    <div class="container">
+        <header>
+            <h1>Красивые <b>формы</b></h1>
+            <nav>
+                <a href="index.html">Демо 1</a>
+                <a href="index2.html">Демо 2</a>
+                <a href="index3.html">Демо 3</a>
+                <a class="current-demo" href="index4.html">Демо 4</a>
+                <a href="index5.html">Демо 5</a>
+                <a href="index6.html">Демо 6</a>
+                <a href="index7.html">Демо 7</a>
+            </nav>
+        </header>
+        <form class="decor">
+            <div class="form-left-decoration"></div>
+            <div class="form-right-decoration"></div>
+            <div class="circle"></div>
+            <div class="form-inner">
+                <h3>Написать нам</h3>
+                <input type="text" placeholder="Username">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Сообщение..." rows="3"></textarea>
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
